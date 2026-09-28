@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sanika Phalke — Backend & Cloud Engineer</title>
+<title>Sanika Phalke — Backend Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -51,6 +51,21 @@ section:last-of-type{border-bottom:none;}
 @media (max-width:680px){.intro-grid{grid-template-columns:1fr;}.photo-panel{max-width:280px;margin:0 auto;order:-1;}}
 .btn{font-family:var(--mono);font-size:.85rem;padding:10px 20px;border:1px solid var(--ink);border-radius:2px;color:var(--ink);}
 .btn.solid{background:var(--ink);color:var(--paper);}
+
+/* PROJECTS */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+.pcard{position:relative;overflow:hidden;padding:20px;border:1px solid var(--rule);border-radius:8px;opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease,border-color .25s;}
+.pcard.show{opacity:1;transform:none;}
+.pcard::before{content:"";position:absolute;top:0;left:-60%;width:60%;height:2px;background:linear-gradient(90deg,transparent,var(--teal),var(--gold),transparent);transition:left .7s ease;}
+.pcard:hover{border-color:var(--teal);}
+.pcard:hover::before{left:100%;}
+.pcard .pnum{font-family:var(--mono);font-size:.72rem;color:var(--ink-dim);}
+.pcard h3{font-family:var(--serif);font-size:1.02rem;margin:6px 0 8px;}
+.pcard p{color:var(--ink-dim);font-size:.87rem;}
+.pcard .ptags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.pcard .ptags span{font-family:var(--mono);font-size:.68rem;color:var(--teal);border:1px solid var(--rule);padding:2px 8px;border-radius:4px;}
+.pcard .plive{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:.78rem;color:var(--gold);border-bottom:1px solid var(--gold);margin-top:14px;transition:gap .2s;}
+.pcard .plive:hover{gap:9px;}
 
 /* EDUCATION */
 .edu-item{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--rule);}
@@ -146,78 +161,29 @@ footer p{color:var(--ink-dim);font-size:.85rem;margin-top:10px;}
 
 <section id="experience" class="wrap">
   <div class="shead"><span class="num">§ 02</span><h2>Work Experience</h2></div>
+  <div class="job"><div class="top"><h3>Backend Engineer <span class="co">— Global Smart Vision</span></h3><span class="when">Jun 2026 – Sep 2026</span></div><p>Built scalable backend microservices in Java and Spring Boot, applying event-driven architecture principles.</p></div>
+   <div class="job"><div class="top"><h3>Backend Engineer Apprentice <span class="co">— DWS</span></h3><span class="when">Apr 2025 – May 2025</span></div><p>Built Java/Spring Boot microservices exposing RESTful APIs, using Eureka for service discovery and registration.</p></div>
+  <div class="job"><div class="top"><h3>Data Science Intern <span class="co">— Bharat Intern</span></h3><span class="when">Jun 2024 – Aug 2024</span></div><p>Preprocessed and analyzed 10K+ structured records in Python to drive actionable business insights.</p></div>
+  <div class="job"><div class="top"><h3>Data Analyst Apprentice <span class="co">— eClerx</span></h3><span class="when">Sep 2025 – Jan 2026</span></div><p>Automated data-extraction pipelines with SQL and designed performance-tracking dashboards that removed operational bottlenecks.</p></div>
+  <div class="job"><div class="top"><h3>AWS Cloud Intern <span class="co">— Elitetech</span></h3><span class="when">Jan 2025 – Jun 2025</span></div><p>Deployed cloud-native applications using AWS EC2, Lambda and S3, and automated infrastructure with IaC.</p></div>
+  <div class="job"><div class="top"><h3>Business Analytics Intern <span class="co">— Finlatics</span></h3><span class="when">Apr 2024 – May 2024</span></div><p>Ran SQL-based trend analysis and built visualizations to support strategic, data-driven decisions.</p></div>
+</section>
 
-  <div class="job">
-    <div class="top">
-      <h3>Backend Engineer <span class="co">— Global Smart Vision</span></h3>
-      <span class="when">Jun 2026 – Sep 2026</span>
-    </div>
-    <ul>
-      <li>Engineered scalable, resilient microservices in Java and Spring Boot, applying 12-factor principles to handle high-volume transactional workloads.</li>
-      <li>Integrated asynchronous message queues for decoupled service communication, reducing latency and boosting core uptime.</li>
-      <li>Optimized PostgreSQL database queries and indexes to maintain data integrity and speed under heavy loads.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="top">
-      <h3>Backend Engineer Apprentice <span class="co">— DWS</span></h3>
-      <span class="when">Apr 2025 – May 2025</span>
-    </div>
-    <ul>
-      <li>Developed RESTful microservices in Java and Spring Boot, leveraging Eureka for dynamic service discovery and registration.</li>
-      <li>Built data access layers using custom SQL queries, validating API endpoints via Postman and streamlining version control with Git.</li>
-      <li>Processed large-scale datasets in Hadoop environments and managed Linux-based Python application troubleshooting.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="top">
-      <h3>Data Analyst Apprentice <span class="co">— eClerx</span></h3>
-      <span class="when">Sep 2025 – Jan 2026</span>
-    </div>
-    <ul>
-      <li>Automated ETL and data-extraction pipelines using advanced SQL, delivering validated, structured datasets for business reporting.</li>
-      <li>Designed interactive Power BI KPI dashboards and executed EDA, eliminating operational bottlenecks and streamlining team workflows.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="top">
-      <h3>AWS Cloud Intern <span class="co">— Elitetech</span></h3>
-      <span class="when">Jan 2025 – Jun 2025</span>
-    </div>
-    <ul>
-      <li>Architected and deployed serverless and containerized cloud-native applications on AWS (EC2, Lambda, S3, API Gateway).</li>
-      <li>Automated infrastructure provisioning using Terraform (IaC), embedding DevSecOps best practices to accelerate release cycles.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="top">
-      <h3>Data Science Intern <span class="co">— Bharat Intern</span></h3>
-      <span class="when">Jun 2024 – Aug 2024</span>
-    </div>
-    <ul>
-      <li>Cleaned, preprocessed, and analyzed 10,000+ structured records using Python to extract high-value commercial patterns.</li>
-      <li>Built predictive data models that provided leadership with actionable forecasts to drive strategic planning.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="top">
-      <h3>Business Analytics Intern <span class="co">— Finlatics</span></h3>
-      <span class="when">Apr 2024 – May 2024</span>
-    </div>
-    <ul>
-      <li>Executed SQL-based trend and historical analysis on business datasets to discover growth opportunities.</li>
-      <li>Constructed visual analytics dashboards to translate raw data into clear, decision-ready executive insights.</li>
-    </ul>
+<section id="projects" class="wrap">
+  <div class="shead"><span class="num">§ 03</span><h2>Projects</h2></div>
+  <div class="pgrid">
+    <div class="pcard"><span class="pnum">01</span><h3>Dynamic Website Hosting on AWS</h3><p>Designed and launched a responsive, high-availability web app on AWS, tuned for quick page loads and a seamless user experience.</p><div class="ptags"><span>AWS</span><span>High Availability</span></div></div>
+    <div class="pcard"><span class="pnum">02</span><h3>Sanjivani Clinic — Website</h3><p>Responsive clinic website built with HTML5, CSS3 and JavaScript/TypeScript, deployed with an automated CI pipeline.</p><div class="ptags"><span>HTML/CSS</span><span>TypeScript</span><span>Netlify</span></div><a class="plive" href="https://sanjivani-clinic1.netlify.app/" target="_blank" rel="noopener">View live →</a></div>
+    <div class="pcard"><span class="pnum">03</span><h3>Amol Krishi — Website</h3><p>Responsive agri-business website built with HTML5, CSS3 and JavaScript/TypeScript, shipped through an automated deployment pipeline.</p><div class="ptags"><span>HTML/CSS</span><span>TypeScript</span><span>Vercel</span></div><a class="plive" href="https://amol-krishi.vercel.app/" target="_blank" rel="noopener">View live →</a></div>
+    <div class="pcard"><span class="pnum">04</span><h3>Food Delivery App Backend</h3><p>Engineered a containerized microservices backend handling food orders, with optimized PostgreSQL queries keeping response times fast.</p><div class="ptags"><span>Microservices</span><span>Docker</span><span>PostgreSQL</span></div></div>
+    <div class="pcard"><span class="pnum">05</span><h3>Gate Glide Prototype</h3><p>Digital transformation prototype automating workflow verification, streaming data pipelines and visualizing metrics on Power BI dashboards.</p><div class="ptags"><span>Power BI</span><span>Automation</span></div></div>
+    <div class="pcard"><span class="pnum">06</span><h3>Floor Performance Governor</h3><p>Real-time operational analytics system tracking floor productivity trends and converting raw data into clear performance reports.</p><div class="ptags"><span>Real-time Analytics</span></div></div>
+    <div class="pcard"><span class="pnum">07</span><h3>Financial &amp; Supply Chain Intelligence Dashboard</h3><p>End-to-end analytics platform automating financial risk reporting while tracking inventory and forecasting supply chain demand.</p><div class="ptags"><span>Risk Reporting</span><span>Forecasting</span></div></div>
   </div>
 </section>
 
 <section id="skills" class="wrap">
-  <div class="shead"><span class="num">§ 03</span><h2>Skills</h2></div>
+  <div class="shead"><span class="num">§ 04</span><h2>Skills</h2></div>
   <div class="skillgrp"><h4>Backend &amp; Software Engineering</h4><div class="tags">
     <span class="tag">Java (Spring Boot)</span><span class="tag">Python</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">HTML/CSS</span><span class="tag">RESTful APIs</span><span class="tag">Microservices Architecture</span><span class="tag">Service Discovery (Eureka)</span><span class="tag">Event-Driven Architecture</span><span class="tag">Distributed Systems</span><span class="tag">System Design</span><span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Debugging &amp; Problem Solving</span>
   </div></div>
@@ -239,7 +205,7 @@ footer p{color:var(--ink-dim);font-size:.85rem;margin-top:10px;}
 </section>
 
 <section id="certifications" class="wrap">
-  <div class="shead"><span class="num">§ 04</span><h2>Certifications</h2></div>
+  <div class="shead"><span class="num">§ 05</span><h2>Certifications</h2></div>
   <div class="cert-list">
     <div class="cert-row"><span class="mark">01</span><div><strong>Cloud Computing Foundations &amp; Generative AI</strong><span>Google Cloud</span></div></div>
     <div class="cert-row"><span class="mark">02</span><div><strong>Oracle Cloud Infrastructure &amp; Data Platforms</strong><span>Oracle — high-availability cloud setups, real-time analytics</span></div></div>
@@ -261,9 +227,11 @@ addEventListener('scroll',()=>{
   document.getElementById('bar').style.width=p+'%';
 },{passive:true});
 const jobs=document.querySelectorAll('.job');
+const pcards=document.querySelectorAll('.pcard');
 const tags=document.querySelectorAll('.tag');
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}})},{threshold:.2});
 jobs.forEach(j=>io.observe(j));
+pcards.forEach((c,i)=>{c.style.transitionDelay=(i%3)*100+'ms';io.observe(c);});
 const io2=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');}})},{threshold:.5});
 tags.forEach(t=>io2.observe(t));
 </script>
